@@ -2,10 +2,13 @@
     "compilerOptions": {
         "moduleResolution": "node",
         "module": "ESNext",
+        "typeRoots": [
+            "./node_modules/@types/"
+          ],
         "types": [
             "node",
             "@wdio/globals/types",
-            "expect-webdriverio",
+            "@types/mocha",
             "@wdio/mocha-framework"
         ],
         "target": "es2022"
