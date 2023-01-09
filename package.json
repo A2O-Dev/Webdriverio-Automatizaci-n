@@ -1,5 +1,5 @@
 {
-  "name": "my-new-project",
+  "name": "a2odev-website-tests",
   "type": "module",
   "devDependencies": {
     "@types/mocha": "^10.0.1",

@@ -1,6 +1,12 @@
-describe('Login Test Scenarios', () => {
-  it('should login with valid credentials', async () => {
-    await browser.url('https://a2odev.com/')
+describe('Contact Form', () => {
+  it('should have a complete UI', async () => {
+    await browser.url('https://staging.a2odev.com/')
+    
+    await expect($('#name')).toBeExisting()
+    await expect($('#email')).toBeExisting()
+  })
+  it('should send a success message', async () => {
+    await browser.url('https://staging.a2odev.com/')
 
     await $('#name').setValue('user test')
     await $('#email').setValue('test@mail.com')
