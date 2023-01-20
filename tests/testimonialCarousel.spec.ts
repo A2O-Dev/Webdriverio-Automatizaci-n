@@ -2,7 +2,7 @@ describe('Testimonial - Carousel', () => {
     it('Check the testimonial carousel', async() => {
         await browser.url('https://staging-new.a2odev.com/')
         await browser.pause(3000)
-        browser.maximizeWindow()
+        await browser.maximizeWindow()
         
         const testimonialCardDrag = await $('.swiper-slide-active .slick-slide')
         const testimonialEric = await $('.swiper-slide-next .slick-slide').$('.elementskit-author-name=Eric Goldman')
