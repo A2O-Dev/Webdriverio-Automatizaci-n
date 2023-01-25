@@ -12,7 +12,7 @@ describe('Testimonial - Carousel', () => {
         testimonialCardLeft.click()  // centrar seccion
         await browser.pause(2000)
 
-        // Drag and drop sliding
+        // Drag and Drop sliding
 
             // Left -> Rigth
         for (let index = 1; index <= 5; index++) {
