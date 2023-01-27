@@ -16,10 +16,7 @@ describe('Testimonial - Carousel', () => {
 
             // Left -> Rigth
         for (let index = 5; index >= 1; index--) {
-            console.debug('INDEX : ' + index);
-            
-            switch (index) {
-                
+            switch (index) {  
                 case 1:
                     await $('.swiper-slide-active .slick-slide').dragAndDrop({ x: 100, y: 0 })
                     expect(testimonialCory).toBeExisting()
@@ -47,10 +44,7 @@ describe('Testimonial - Carousel', () => {
 
             // Rigth -> Left
         for (let index = 1; index <= 5; index++) {
-            console.debug('index : ' + index);
-            
             switch (index) {
-                
                 case 1:
                     await $('.swiper-slide-active .slick-slide').dragAndDrop({ x: -100, y: 0 })
                     expect(await $('.swiper-slide-next .slick-slide').$('.elementskit-author-name=Stephen Beehler')).toBeExisting()
@@ -79,8 +73,7 @@ describe('Testimonial - Carousel', () => {
         // Sliding with buttons
 
             // button Next
-        for (let index = 1; index <= 5; index++) {
-            console.debug('index : ' + index);         
+        for (let index = 1; index <= 5; index++) {        
             switch (index) {           
                 case 1:
                     await $('.slick-next').click()
@@ -109,10 +102,7 @@ describe('Testimonial - Carousel', () => {
 
             // button Prev      
         for (let index = 5; index >= 1; index--) {
-            console.debug('INDEX : ' + index);
-            
             switch (index) {
-                
                 case 1:
                     await $('.slick-prev').click()
                     expect(testimonialCory).toBeExisting()
@@ -136,9 +126,6 @@ describe('Testimonial - Carousel', () => {
                     break;               
             }
             await browser.pause(2000)
-        }
-        
+        } 
     })
-
-
 })
