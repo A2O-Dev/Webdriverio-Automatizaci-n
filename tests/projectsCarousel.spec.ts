@@ -25,6 +25,8 @@ describe('Home Page/Project - Check the carousel of the images', ()=>{
               expect(await $(`//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()            
             }
           }
+          arrowRightCasting.click()
+          await browser.pause(2000)
   
           for (let index = 5; index >= 1; index--) {
             arrowLeftCasting.click()
@@ -44,7 +46,7 @@ describe('Home Page/Project - Check the carousel of the images', ()=>{
   
           
           for (let index = 1; index <= 4; index++) {
-            if (index > 3) {
+            if (index < 4) {
               expect(await $(`//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`)).toBeExisting()
               arrowRightImages.click()
               await browser.pause(2000)
