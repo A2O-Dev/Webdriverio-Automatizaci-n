@@ -19,7 +19,7 @@ describe('Alert message when submitting with empty required fields', () => {
         await $('#name').setValue('')
         await $('#email').setValue('test@mail.com')
         await $('[name="message"]').setValue('Test with Name empty')
-        btnSubmit.click()
+        await btnSubmit.click()
         await expect (alertMessage).toBeExisting()
         await browser.pause(3000)
 
