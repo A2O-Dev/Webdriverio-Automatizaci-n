@@ -1,4 +1,5 @@
 describe('Contact Form', () => {
+    ///first example
     it('check de format email', async () => {
         await browser.url('https://staging-new.a2odev.com/')
         await browser.maximizeWindow()
@@ -12,6 +13,7 @@ describe('Contact Form', () => {
         await expect($('.wpcf7-response-output')).toBeExisting()
         await expect($('.wpcf7-response-output')).toHaveTextContaining('One or more fields have an error. Please check and try again.')
       })
+    ///second example
     it('check de format email', async () => {
         await browser.url('https://staging-new.a2odev.com/')
         await browser.maximizeWindow()
@@ -25,6 +27,7 @@ describe('Contact Form', () => {
         await expect($('.wpcf7-response-output')).toBeExisting()
         await expect($('.wpcf7-response-output')).toHaveTextContaining('One or more fields have an error. Please check and try again.')
     })
+    ///third example
     it('check de format email', async () => {
         await browser.url('https://staging-new.a2odev.com/')
         await browser.maximizeWindow()
