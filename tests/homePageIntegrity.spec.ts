@@ -4,7 +4,7 @@ describe('Home Page Integrity', () => {
         await browser.maximizeWindow()
         await browser.pause(3000)
 
-        const logotipeimg = await $('//*[@id="post-1934"]/div/div/section[1]/div/div/div/section/div/div[1]/div/div/div/a/img')
+        const logoTipeImg = await $('//*[@id="post-1934"]/div/div/section[1]/div/div/div/section/div/div[1]/div/div/div/a/img')
         const imgMoviesCasting = await $('//*[@id="scroll-up"]/div/div[2]/div/div/div/img')
         const aboutUsLink = await $('=About us')
         const servicesLink = await $('=Services')
@@ -12,10 +12,10 @@ describe('Home Page Integrity', () => {
         const faqLink = await $('=FAQ')
         const contactUsLink = await $('=Contact us')
         const languageLink = await $('//*[@id="premium-nav-menu-item-8907"]/a/span[1]/img')
-        const goTotopButton = await $('//*[@id="post-1934"]/div/div/section[7]/div/div/div/div/div/div/a')
+        const goToTopButton = await $('//*[@id="post-1934"]/div/div/section[7]/div/div/div/div/div/div/a')
 
         expect(await $('.elementor-section elementor-top-section elementor-element elementor-element-2bc02a70 elementor-section-full_width nav elementor-section-height-default elementor-section-height-default')).toBeExisting()
-        expect(await $(logotipeimg)).toBeExisting()
+        expect(await $(logoTipeImg)).toBeExisting()
         expect(await $(imgMoviesCasting)).toBeExisting()
         expect(await $('h1=We turn your ideas into High Quality products !')).toBeExisting()
         expect(await $('//*[@id="scroll-up"]/div/div[1]/div/div[2]/div/p')).toBeExisting()
@@ -62,7 +62,7 @@ describe('Home Page Integrity', () => {
         await browser.pause(2000)
         expect(await $('elementor-element elementor-element-7a224132 elementor-view-stacked elementor-fixed go-top elementor-shape-circle elementor-widget elementor-widget-icon active')).toBeExisting()
         await browser.pause(2000)
-        expect(await $(goTotopButton)).toBeExisting()
+        expect(await $(goToTopButton)).toBeExisting()
         
         ///cards
         expect(await $('//*[@id="Layer_1"]')).toBeExisting()
