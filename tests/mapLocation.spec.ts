@@ -1,48 +1,19 @@
 describe('', () => {
-    it('Check that the map ubication is right', async () => {
-        await browser.url('https://staging-new.a2odev.com/')
+
+it('Check map existence', async() => {
+    await browser.url('https://staging-new.a2odev.com/')
         await browser.pause(3000)
         await browser.maximizeWindow()
-
         await $('#premium-nav-menu-item-14425').click()
         await browser.pause(8000)
-        //const btnZoom = await $('//*[@id="mapDiv"]/div/div/div[13]/div/div/div/button[1]')
-        //const btnZoom = await $('.gm-bundled-control-on-bottom')
-        //const btnZoom = await $('.gm-control-active')
-        //await btnZoom.click()
-        //const btn = await $('aria/Ampliar')
-        //console.log(await $(btnZoom).getAttribute('area-label'))
+      
+        const prevElementIframe = await $('.elementor-widget-container')
+        const onlyElemtIframe = await $('iframe')
+        const elementIframe = $(prevElementIframe).$(onlyElemtIframe)
 
-        await browser.action('key')
-            .down('ctrl')
-            .perform()
-        expect(await $('aria/Mapa')).toBeExisting()
+        expect (elementIframe).toBeExisting()
 
-        await browser.pause(4000)
-
+        await expect(elementIframe).toHaveAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.1358151833942!2d-63.201536485340014!3d-17.83226708111117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e99569937a45%3A0xa5edf408ba327226!2sA2O%20Dev!5e0!3m2!1ses!2sbo!4v1671550857839!5m2!1ses!2sbo')
 
     })
-
-})
-
-it.only('should scroll using wheel action commands', async () => {
-    await browser.url('https://staging-new.a2odev.com/')
-    await browser.pause(3000)
-    await browser.maximizeWindow()
-    await $('#premium-nav-menu-item-14425').click()
-    await browser.pause(8000)
-    await browser.action('key')
-            .down(key.Ctrl)
-            .perform()
-
-    console.log(await browser.execute(() => window.scrollY)) // returns 0
-    await browser.pause(3000)
-    await browser.action('wheel').scroll({
-        deltaX: 10,
-        deltaY: 500,
-        duration: 200
-    }).perform()
-    await browser.pause(3000)
-    console.log(await browser.execute(() => window.scrollY)) // returns 500
-    await browser.pause(3000)
 })
