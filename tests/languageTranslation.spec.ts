@@ -1,5 +1,5 @@
-describe('Language Traslation', () => {
-    it('Language Traslation Test', async () => {
+describe('Language Translation', () => {
+    it('Language Translation Test', async () => {
         const url = 'https://staging-new.a2odev.com/'
         await browser.url(url)
         await browser.pause(3000)
