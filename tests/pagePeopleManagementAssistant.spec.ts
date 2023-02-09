@@ -1,0 +1,45 @@
+describe('Check the page with the requirements for the PEOPLE MANAGEMENT ASSISTANT area.', () => {
+    it('Check PEOPLE MANAGEMENT ASSISTANT page', async () => {
+        await browser.url('https://staging-new.a2odev.com/jobs/people-management-assistant/')
+        await browser.pause(3000)
+        await browser.maximizeWindow()
+
+        // Verifying page content
+        const firstTitle = await $('h1=People Management Assistant')
+        //const navHome = await $('//*[@class="elementor-widget-container"]/p/a[1]')
+        //const navJob = await $('//*[@class="elementor-widget-container"]/p/a[2]')
+        const navMain = await $('//*[@class="elementor-widget-container"]/p')
+        const requirements = await $('h3=Requerimientos')
+        const extras = await $('h3=Extras')
+        const responsibilities = await $('h3=Responsabilidades')
+        const applyNow = await $('h1=Postúlate ahora!')
+        const notes = await $('.elementor-element-263ceb46 .elementor-widget-container')
+        const jobAppForm = await $('//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[1]')
+        const teoryTestForm = await $('//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[2]')
+        const logicalTesr = await $('//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[3]')
+
+        await expect(browser).toHaveUrl('https://staging-new.a2odev.com/jobs/people-management-assistant/')
+        await expect (firstTitle).toBeExisting()
+        //console.log(navHome.getText())
+        //await expect(navHome).toHaveText('Home')
+        //console.log(navJob.getText())
+        //await expect(navJob).toHaveText('Jobs')
+        console.log(navMain.getText())
+        await expect(navMain).toHaveText('Home  –  Jobs – People Management Assistant')
+        await expect (requirements).toBeExisting()
+        await expect (extras).toBeExisting()
+        await expect (responsibilities).toBeExisting()
+        await expect (applyNow).toBeExisting()
+        await expect (notes).toBeExisting()
+        //console.log(jobAppForm.getText())
+        await browser.pause(3000)
+
+       // await $(notes).click()
+
+        //const a= $(teoryTestForm).isClickable()
+        //console.log(a)
+        // Checking page links
+        await $(teoryTestForm).click()
+        await browser.pause(6000)
+    })
+})
