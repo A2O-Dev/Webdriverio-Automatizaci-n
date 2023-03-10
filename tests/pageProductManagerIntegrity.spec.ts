@@ -5,11 +5,11 @@ describe('Check the page for Product Manager Recruitment.', () => {
         await browser.maximizeWindow()
         await browser.pause(2000)
 
-        const producManagerLink = await $('.elementor-element-1247d78 .elementor-widget-container .elementor-heading-title').$('a')
+        const productManagerLink = await $('.elementor-element-1247d78 .elementor-widget-container .elementor-heading-title').$('a')
         
-        await producManagerLink.scrollIntoView({ block: 'center', inline: 'center' });
-        await expect(producManagerLink).toHaveText('PRODUCT MANAGER')
-        await $(producManagerLink).click()
+        await productManagerLink.scrollIntoView({ block: 'center', inline: 'center' });
+        await expect(productManagerLink).toHaveText('PRODUCT MANAGER')
+        await $(productManagerLink).click()
         await browser.pause(3000)
         await expect(browser).toHaveUrl('https://staging-new.a2odev.com/jobs/product-manager/')
         
