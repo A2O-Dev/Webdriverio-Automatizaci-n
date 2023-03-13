@@ -1,5 +1,5 @@
 describe('Check the UI/UX integrity page for the WEB APP DEVELOPER area.', () => {
-    it('Page of the WEB APP DEVELOPER area', async() => {
+    it('Page of the WEB APP DEVELOPER area', async () => {
         await browser.url('https://staging-new.a2odev.com/jobs/')
         await browser.pause(3000)
         await browser.maximizeWindow()
@@ -7,7 +7,7 @@ describe('Check the UI/UX integrity page for the WEB APP DEVELOPER area.', () =>
 
         const scrollDown = await $('.elementor-element-6b90e2d')
         const webAppDevLink = await $('.elementor-element-e1b4a74 .elementor-widget-container .elementor-heading-title').$('a')
-        
+
         await scrollDown.scrollIntoView(false);  // Scroll down to the job title section
         await browser.pause(2000)
         await expect(webAppDevLink).toHaveText('WEB APP DEVELOPER')
@@ -35,15 +35,15 @@ describe('Check the UI/UX integrity page for the WEB APP DEVELOPER area.', () =>
 
         // Main navigation menu
         await expect(aboutUsLink).toBeExisting()
-        await expect (aboutUsLink).toHaveHref('https://staging-new.a2odev.com/about-us/')
+        await expect(aboutUsLink).toHaveHref('https://staging-new.a2odev.com/about-us/')
         await expect(servicesLink).toBeExisting()
-        await expect (servicesLink).toHaveHref('https://staging-new.a2odev.com/#services')
+        await expect(servicesLink).toHaveHref('https://staging-new.a2odev.com/#services')
         await expect(projectsLink).toBeExisting()
-        await expect (projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
+        await expect(projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
         await expect(faqLink).toBeExisting()
-        await expect (faqLink).toHaveHref('https://staging-new.a2odev.com/faq/')
+        await expect(faqLink).toHaveHref('https://staging-new.a2odev.com/faq/')
         await expect(iconLenguage).toHaveAttribute('src', 'https://staging-new.a2odev.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png')
-        
+
         // Page Navigator
         await expect(firstTitle).toBeExisting()
         await expect(pageNav).toHaveText('Home  –  Jobs – Web App Developer')
