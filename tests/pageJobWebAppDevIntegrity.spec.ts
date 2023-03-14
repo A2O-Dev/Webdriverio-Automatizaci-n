@@ -73,5 +73,6 @@ describe('Check the UI/UX integrity page for the WEB APP DEVELOPER area.', () =>
         await expect(buttonGoToTop).toBeExisting()
         await buttonGoToTop.click()
         await browser.pause(3000)
+        
     })
 })
