@@ -1,5 +1,5 @@
 describe('Check the integrity of the UI of the Web App Development page in Services', () => {
-    it('Web App Development page', async() => {
+    it('Web App Development page', async () => {
         await browser.url('https://staging-new.a2odev.com/')
         await browser.pause(3000)
         await browser.maximizeWindow()
@@ -43,7 +43,7 @@ describe('Check the integrity of the UI of the Web App Development page in Servi
         const twitterLink = await $('a[href="https://twitter.com/a2odev"]')
         const linkedinLink = await $('a[href="https://bo.linkedin.com/company/a2odev"]')
         const homePage = await $('.elementor-element-4bb66e56 .elementor-widget-container .elementor-icon-wrapper a')
-        
+
         await expect(firstTitle).toBeExisting()
         await expect(paragraph).toHaveText('Update your existing web app to the latest technologies, or create one from scratch!')
         await expect(item1).toHaveText('FrontEnd Technologies we excel at: VueJs, NodeJs, AngularJ, ReactJs')
