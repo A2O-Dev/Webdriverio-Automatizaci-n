@@ -25,7 +25,7 @@ describe('Check the "IT Technician and Data Center" page', () => {
         const pageNav = await $('//*[@class="elementor-widget-container"]/p')
         const pageNavHome = await $('//*[@class="elementor-widget-container"]/p/a[1]')
         const pageNavJobs = await $('//*[@class="elementor-widget-container"]/p/a[2]')
-        const jonResponsibilities = await $('h3=Responsabilidades del cargo')
+        const jobResponsibilities = await $('h3=Responsabilidades del cargo')
         const skillRequirements = await $('h3=Habilidades y conocimientos requerimientos')
         const extras = await $('h3=Extras')
         const applyNow = await $('h1=Postúlate ahora!')
@@ -52,7 +52,7 @@ describe('Check the "IT Technician and Data Center" page', () => {
         await expect(pageNavJobs).toHaveAttribute('href', 'https://staging-new.a2odev.com/jobs/')
 
         // Sections of the page
-        await expect(jonResponsibilities).toBeExisting()
+        await expect(jobResponsibilities).toBeExisting()
         await notes.scrollIntoView(false)
         await browser.pause(3000)
         await expect(skillRequirements).toBeExisting()
