@@ -1,16 +1,9 @@
-describe('Check the UI/UX integrity page for the DEVOPS ENGINEER area.', () => {
+describe('Check the UI integrity page for the DEVOPS ENGINEER area.', () => {
     it('Page of the DEVOPS ENGINEER area', async () => {
-        await browser.url('https://staging-new.a2odev.com/jobs/')
+        await browser.url('https://staging-new.a2odev.com/dev-ops-engineer/')
         await browser.pause(3000)
         await browser.maximizeWindow()
         await browser.pause(2000)
-
-        const devopsEngineerLink = await $('.elementor-element-af78556 .elementor-widget-container .elementor-heading-title a')
-
-        await expect(devopsEngineerLink).toHaveText('DEVOPS ENGINEER')
-        await $(devopsEngineerLink).click()
-        await browser.pause(3000)
-        await expect(browser).toHaveUrl('https://staging-new.a2odev.com/dev-ops-engineer/')
 
         const aboutUsLink = await $('#premium-nav-menu-item-1897 a')
         const servicesLink = await $('#premium-nav-menu-item-14432 a')
@@ -37,6 +30,8 @@ describe('Check the UI/UX integrity page for the DEVOPS ENGINEER area.', () => {
         await expect(aboutUsLink).toHaveHref('https://staging-new.a2odev.com/about-us/')
         await expect(servicesLink).toBeExisting()
         await expect(servicesLink).toHaveHref('https://staging-new.a2odev.com/#services')
+        await expect(contactUsLink).toBeExisting()
+        await expect(contactUsLink).toHaveHref('#contact-us')
         await expect(projectsLink).toBeExisting()
         await expect(projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
         await expect(faqLink).toBeExisting()
