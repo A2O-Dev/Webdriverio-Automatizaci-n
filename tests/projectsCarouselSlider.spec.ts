@@ -10,87 +10,76 @@ describe('Check the carousel Slider', () => {
         const realEstateApp = await $('.premium-modal-trigger-text=Real Estate App')
 
         await projectLink.click()
-        await browser.pause(3000)
+        await browser.pause(2000)
 
-        ///Carouse in Casting App Link
+        //Carousel in Casting App 
 
         await castingAppLink.click()
-        await browser.pause(3000)
-        const closeButtonCasting = await $('//*[@id="premium-modal-07734af"]/div/div[1]/div/button')
+        await browser.pause(2000)
+        const closeButtonCasting = await $('#premium-modal-07734af button[type="button"]')
+        const sliderCasting = await $('.n2-ss-slide .n-uc-iqmvAW3myKBf')
         for (let index = 1; index <= 6; index++) {
             if (index <= 5) {
                 await $(`//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: -100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderCasting).toBeExisting()
             }
         }
-        await browser.pause(3000)
-        await $('//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div').dragAndDrop({ x: 100, y: 0 })
-        await browser.pause(3000)
+        await $(sliderCasting).dragAndDrop({ x: 100, y: 0 })
         for (let index = 5; index > 1; index--) {
             if (index <= 5) {
                 await $(`//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: 100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-9"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderCasting).toBeExisting()
             }
         }
-
         await closeButtonCasting.click()
 
-        ///Carouse in Images App Link
+        ///Carousel in Images App 
 
         await imagesAppLink.click()
-        await browser.pause(3000)
-        const closeButtonImages = $('//*[@id="premium-modal-5ae5ff9"]/div/div[1]/div/button')
+        await browser.pause(2000)
+        const closeButtonImages = $('#premium-modal-5ae5ff9 button[type="button"]')
+        const sliderImages = $('.n2-ss-slider .n-uc-hFyb5LDBg43e')
         for (let index = 1; index <= 3; index++) {
             if (index <= 3) {
                 await $(`//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: -100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderImages).toBeExisting()
             }
         }
-        await browser.pause(3000)
-        await $('//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div').dragAndDrop({ x: 100, y: 0 })
-        await browser.pause(3000)
+        await $(await sliderImages).dragAndDrop({ x: 100, y: 0 })
         for (let index = 3; index > 1; index--) {
             if (index <= 3) {
                 await $(`//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: 100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-10"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderImages).toBeExisting()
             }
         }
-
         await closeButtonImages.click()
 
-        ///Carouse in Real Estate App Link
+        ///Carousel in Real Estate App 
 
         await realEstateApp.click()
-        await browser.pause(3000)
-        const closeButtonReal = $('//*[@id="premium-modal-3da65c0"]/div/div[1]/div/button')
+        await browser.pause(2000)
+        const closeButtonReal = $('#premium-modal-3da65c0 button[type="button')
+        const sliderReal = $('.n2-ss-slider .n-uc-tWkRLjSP0dyt')
         for (let index = 1; index <= 2; index++) {
             if (index <= 2) {
                 await $(`//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: -100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderReal).toBeExisting()
             }
         }
-        await browser.pause(3000)
-        await $('//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div').dragAndDrop({ x: 100, y: 0 })
-        await browser.pause(3000)
+        await $(await sliderReal).dragAndDrop({ x: 100, y: 0 })
         for (let index = 2; index > 1; index--) {
             if (index <= 2) {
                 await $(`//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[${index}]/div[2]/div`).dragAndDrop({ x: 100, y: 0 })
-                await browser.pause(2000)
             } else {
-                await expect($(`//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div`)).toBeExisting()
+                await expect(sliderReal).toBeExisting()
             }
         }
-
         await closeButtonReal.click()
+
     })
 })
