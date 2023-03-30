@@ -37,6 +37,7 @@ describe('Check the integrity of the UI of the Other Solutions page in Services'
         await expect(contactUsLink).toHaveHref('#contact-us')
         await expect(iconLenguage).toHaveAttribute('src', 'https://staging-new.a2odev.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png')
 
+        // Details page other solutions
         await expect(firstTitle).toBeExisting()
         await expect(image).toBeExisting()
         await expect(paragraph).toBeExisting()
