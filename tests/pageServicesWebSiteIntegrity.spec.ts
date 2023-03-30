@@ -1,49 +1,27 @@
 describe('Check the integrity of the UI of the Web Site Development page in Services', () => {
     it('Page of Web Site Development', async () => {
-        await browser.url('https://staging-new.a2odev.com/')
-        await browser.pause(3000)
+        await browser.url('https://staging-new.a2odev.com/website-development/')
         await browser.maximizeWindow()
 
-        const webSiteLink = await $('.elementor-element-6a16c7f')
-        const aboutUsLink = await $('#premium-nav-menu-item-1897 a')
-        const servicesLink = await $('#premium-nav-menu-item-14432 a')
-        const projectsLink = await $('#premium-nav-menu-item-1899 a')
-        const faqLink = await $('#premium-nav-menu-item-1900 a')
-        const contactUsLink = await $('#premium-nav-menu-item-14425 a')
-        const iconLenguage = await $('//*[@id="premium-nav-menu-item-8907"]/a/span/img')
-
-        // Services section
-        await servicesLink.click()
-        await browser.pause(3000)
-        await webSiteLink.click()
-        await browser.pause(3000)
-
-        // Main navigation menu
-        await expect(aboutUsLink).toBeExisting()
-        await expect(aboutUsLink).toHaveHref('https://staging-new.a2odev.com/about-us/')
-        await expect(servicesLink).toBeExisting()
-        await expect(servicesLink).toHaveHref('https://staging-new.a2odev.com/#services')
-        await expect(projectsLink).toBeExisting()
-        await expect(projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
-        await expect(faqLink).toBeExisting()
-        await expect(faqLink).toHaveHref('https://staging-new.a2odev.com/faq/')
-        await expect(contactUsLink).toHaveHref('#contact-us')
-        await expect(iconLenguage).toHaveAttribute('src', 'https://staging-new.a2odev.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png')
-
-        // Sections of the page Services-Website Development
-
+        // Variables
+        const aboutUsLink = await $('=About us')
+        const servicesLink = await $('=Services')
+        const projectsLink = await $('=Projects')
+        const faqLink = await $('=FAQ')
+        const contactUsLink = await $('=Contact us')
+        const iconLenguage = await $('img[title="English"]')
         const firstTitle = await $('h2=Website Development')
-        const paragraph = await $('.elementor-element-72a5de4e .elementor-widget-container')
-        const item1 = await $('//ul[@class="elementor-icon-list-items"]/li[1]')
-        const item2 = await $('//ul[@class="elementor-icon-list-items"]/li[2]')
-        const item3 = await $('//ul[@class="elementor-icon-list-items"]/li[3]')
-        const item4 = await $('//ul[@class="elementor-icon-list-items"]/li[4]')
-        const item5 = await $('//ul[@class="elementor-icon-list-items"]/li[5]')
-        const item6 = await $('//ul[@class="elementor-icon-list-items"]/li[6]')
-        const item7 = await $('//ul[@class="elementor-icon-list-items"]/li[7]')
-        const image = await $('.elementor-element-76185f3d .elementor-widget-container img')
-        const scrollContact = await $('.elementor-element-5c222811')
-        const titleContactUs = await $('.elementor-element-f3d2750 .elementor-widget-container h3')
+        const paragraph = await $('p=Update your existing website to the latest technologies, or create one from scratch!')
+        const item1 = await $('.elementor-icon-list-items li:nth-child(1)')
+        const item2 = await $('.elementor-icon-list-items li:nth-child(2)')
+        const item3 = await $('.elementor-icon-list-items li:nth-child(3)')
+        const item4 = await $('.elementor-icon-list-items li:nth-child(4)')
+        const item5 = await $('.elementor-icon-list-items li:nth-child(5)')
+        const item6 = await $('.elementor-icon-list-items li:nth-child(6)')
+        const item7 = await $('.elementor-icon-list-items li:nth-child(7)')
+        const image = await $('img[src="https://staging-new.a2odev.com/wp-content/uploads/2023/01/mobile-3.png"]')
+        const scrollContact = await $('.contact-footer')
+        const titleContactUs = await $('h3=Contact Us')
         const inputName = await $('#name')
         const inputEmail = await $('#email')
         const inputWebsite = await $('[name="website"]')
@@ -52,11 +30,21 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
         const facebookLink = await $('a[href="https://es-la.facebook.com/a2odev/"]')
         const twitterLink = await $('a[href="https://twitter.com/a2odev"]')
         const linkedinLink = await $('a[href="https://bo.linkedin.com/company/a2odev"]')
-        const homePage = await $('.elementor-element-3dd527a3 .elementor-widget-container .elementor-icon-wrapper a')
+        const homePage = await $('.inicio .elementor-widget-container .elementor-icon-wrapper a')
+        const buttonGoToTop = await $('a[href="#scroll-up"]')
 
+        // Main navigation menu
+        await expect(aboutUsLink).toHaveHref('https://staging-new.a2odev.com/about-us/')
+        await expect(servicesLink).toHaveHref('https://staging-new.a2odev.com/#services')
+        await expect(projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
+        await expect(faqLink).toHaveHref('https://staging-new.a2odev.com/faq/')
+        await expect(contactUsLink).toHaveHref('#contact-us')
+        await expect(iconLenguage).toHaveAttribute('src', 'https://staging-new.a2odev.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png')
+
+        // Sections of the page Website Development
         await expect(firstTitle).toBeExisting()
         await expect(image).toBeExisting()
-        await expect(paragraph).toHaveTextContaining('Update your existing website to the latest technologies, or create one from scratch!')
+        await expect(paragraph).toBeExisting()
         await expect(item1).toHaveTextContaining('WordPress')
         await expect(item2).toHaveTextContaining('Wix')
         await expect(item3).toHaveTextContaining('E-commerce')
@@ -67,8 +55,7 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
 
         // Contact Us
         await scrollContact.scrollIntoView(false)
-        await browser.pause(3000)
-        await expect(titleContactUs).toHaveTextContaining('Contact Us')
+        await expect(titleContactUs).toBeExisting()
         await expect(inputName).toBeExisting()
         await expect(inputEmail).toBeExisting()
         await expect(inputWebsite).toBeExisting()
@@ -77,19 +64,15 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
 
         // Social Networking
         await scrollContact.scrollIntoView({ block: 'center', inline: 'center' })
-        await browser.pause(3000)
         await expect(facebookLink).toBeExisting()
         await expect(twitterLink).toBeExisting()
         await expect(linkedinLink).toBeExisting()
         await expect(homePage).toHaveHref('https://staging-new.a2odev.com/')
 
         // Floating button to go to the top of the page.
-        
-        const buttonGoToTop = await $('a[href="#scroll-up"]')
-
-        await expect(buttonGoToTop).toBeExisting()
+        await expect(buttonGoToTop).toHaveAttribute('class', 'elementor-icon active')
         await buttonGoToTop.click()
-        await browser.pause(3000)
-
+        await expect(buttonGoToTop).not.toHaveAttribute('class', 'active')
+        
     })
 })
