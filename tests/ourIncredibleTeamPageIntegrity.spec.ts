@@ -44,7 +44,7 @@ describe('Check the integrity of the UI/UX of the Our Incredible Team', () => {
         await expect(projectsLink).toHaveHref('https://staging-new.a2odev.com/projects/')
         await expect(faqLink).toHaveHref('https://staging-new.a2odev.com/faq/')
         await expect(contactUsLink).toHaveHref('#contact-us')
-        await expect(iconLenguage).toBeExisting()
+        await expect(iconLenguage).toHaveAttribute('src', 'https://staging-new.a2odev.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png')
 
         // Page header
         await expect(titleSectionOurTeam).toBeExisting()
