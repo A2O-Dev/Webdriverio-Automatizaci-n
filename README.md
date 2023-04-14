@@ -13,26 +13,28 @@ Node >= 17.9.0
 
 1. Install dependencies
 
-   ```shell
-   npm install
-   ```
+```shell
+npm install
+
+```
 
 2. Copy .env.example file
 
-   ```shell
-   cp .env.example .env
-   ```
+```shell
+cp .env.example .env
+
+```
 
 3. Set up environment variables in .env file
 
-   ```
-   EMAIL_GOOGLE=put the credential
-   PASS_GOOGLE=put the credential
-   WEBA2O_URL=put the url
-   ```
+```sh
+A2O_DEV_URL=put the url
+
+```
 
 4. Execute the test of a specific file
 
-   ```shell
-   npx wdio run ./wdio.conf.ts --spec ./tests/fileLocation.spec.ts
-   ```
+```shell
+npx wdio run ./wdio.conf.ts --spec ./tests/fileLocation.spec.ts
+
+```
