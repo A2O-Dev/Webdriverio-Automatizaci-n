@@ -30,6 +30,6 @@ describe('Contact Form Integrity ', () => {
       linkedinLink.moveTo({})
       await browser.pause(2000)
       await $('a[href="https://staging-new.a2odev.com/"]').moveTo({})
-      await browser.pause(2000)
+      await browser.pause(2000) 
     })  
 })

@@ -1,4 +1,4 @@
-{
+/*{
     "compilerOptions": {
         "moduleResolution": "node",
         "module": "ESNext",
@@ -14,3 +14,24 @@
         "target": "es2022"
     }
 }
+*/
+{
+    "compilerOptions": {
+      "moduleResolution": "node",
+      "module": "ESNext",
+      "typeRoots": [
+        "./node_modules/@types/"
+      ],
+      "types": [
+        "node",
+        "@wdio/globals/types",
+        "@types/mocha",
+        "@wdio/mocha-framework"
+      ],
+      "target": "es2022"
+    },
+    "include": [
+      "./tests/**/*.ts",
+      "./dictionary/**/*.ts"
+    ]
+  }

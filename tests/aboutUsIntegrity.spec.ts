@@ -1,10 +1,12 @@
+import { selectors }  from './dictionaries/selectors.ts';
+   
 describe('About Us Integrity', () => {
     it('About us Integrity laptop', async () => {
       await browser.url('https://staging-new.a2odev.com/')
       await browser.maximizeWindow()
       
-      const aboutUsLink = await $('=About us')      
-      const contanctUsLink =await $('=Contact us')
+      const aboutUsLink = await $(selectors.aboutUsLink)      
+      const contanctUsLink =await $(selectors.contactUsLink)
 
       aboutUsLink.click()
       await browser.pause(3000)
