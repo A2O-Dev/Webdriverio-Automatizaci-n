@@ -1,2 +1,4 @@
 # node final 
 /node_modules
+# Environment Variables
+.env
