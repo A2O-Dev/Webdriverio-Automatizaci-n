@@ -1,10 +1,11 @@
+import { navigationMenu }  from '../../dictionaries/selectors/index.ts'
 describe('About Us Integrity', () => {
     it('About us Integrity laptop', async () => {
       await browser.url('https://staging-new.a2odev.com/')
       await browser.maximizeWindow()
       
-      const aboutUsLink = await $('=About us')      
-      const contanctUsLink =await $('=Contact us')
+      const aboutUsLink = await $(navigationMenu.aboutUsLink)
+      const contactUsLink =await $(navigationMenu.contactUsLink)
 
       aboutUsLink.click()
       await browser.pause(3000)
@@ -20,7 +21,7 @@ describe('About Us Integrity', () => {
       await expect($('//*[@id="scroll-up"]/div/div[1]/div/div/div/img')).toBeExisting()
       await browser.pause(3000)
 
-      contanctUsLink.click()
+      contactUsLink.click()
       await expect($('[id="contact-us"]')).toBeExisting()
       await browser.pause(3000)
     })
