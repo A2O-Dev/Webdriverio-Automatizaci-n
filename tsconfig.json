@@ -12,5 +12,5 @@
         "@wdio/mocha-framework"
       ],
       "target": "es2022"
-    },
+    }
   }
