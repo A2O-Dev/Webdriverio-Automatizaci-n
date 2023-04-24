@@ -1,7 +1,7 @@
 // Exporta el diccionario de selectores como un objeto con una propiedad "selectors"
 export const selectors = {
   //Navigation Menu
-  aboutUsLink            : '=About us',
+  aboutUsLink            :'=About us',
   servicesLink           :'=Services',
   projectsLink           :'=Projects',
   faqLink                :'=FAQ',
