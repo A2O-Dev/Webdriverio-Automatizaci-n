@@ -5,7 +5,7 @@ describe('About Us Integrity', () => {
       await browser.maximizeWindow()
       
       const aboutUsLink = await $(navigationMenu.aboutUsLink)
-      const contanctUsLink =await $(navigationMenu.contactUsLink)
+      const contactUsLink =await $(navigationMenu.contactUsLink)
 
       aboutUsLink.click()
       await browser.pause(3000)
@@ -21,7 +21,7 @@ describe('About Us Integrity', () => {
       await expect($('//*[@id="scroll-up"]/div/div[1]/div/div/div/img')).toBeExisting()
       await browser.pause(3000)
 
-      contanctUsLink.click()
+      contactUsLink.click()
       await expect($('[id="contact-us"]')).toBeExisting()
       await browser.pause(3000)
     })
