@@ -1,16 +1,16 @@
 {
- "compilerOptions": {
-  "moduleResolution": "node",
-  "module": "ESNext",
-  "typeRoots": [
-      "./node_modules/@types/"
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "typeRoots": [
+        "./node_modules/@types/"
+      ],
+    "types": [
+        "node",
+        "@wdio/globals/types",
+        "@types/mocha",
+        "@wdio/mocha-framework"
     ],
-  "types": [
-      "node",
-      "@wdio/globals/types",
-      "@types/mocha",
-      "@wdio/mocha-framework"
-  ],
-  "target": "es2022"
- }
-}
+    "target": "es2022"
+   }
+  }
