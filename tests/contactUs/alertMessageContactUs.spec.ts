@@ -25,6 +25,8 @@ describe('Alert message when submitting with empty required fields', () => {
     })
     //second scenario 
     it('Alert Message with the Email empty ', async () => {
+        await browser.url(env.A2O_DEV_URL)
+        await browser.maximizeWindow()
 
         const alertMessage = await $(contactUs.alertMessage)
 
@@ -39,6 +41,8 @@ describe('Alert message when submitting with empty required fields', () => {
     })
     //third scenario
     it('Alert Message with the Message empty ', async () => {
+        await browser.url(env.A2O_DEV_URL)
+        await browser.maximizeWindow()
 
         const alertMessage = await $(contactUs.alertMessage)
 

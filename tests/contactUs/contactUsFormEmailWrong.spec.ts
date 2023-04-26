@@ -25,6 +25,8 @@ describe('Contact us form email wrong', () => {
   })
   ///second scenario 
   it('check de format email n°2', async () => {
+    await browser.url(env.A2O_DEV_URL)
+    await browser.maximizeWindow()
 
     const alertMessage = await $(contactUs.alertMessage)
 
@@ -39,6 +41,8 @@ describe('Contact us form email wrong', () => {
   })
   ///third scenario
   it('check de format email n°3', async () => {
+    await browser.url(env.A2O_DEV_URL)
+    await browser.maximizeWindow()
 
     const alertMessage = await $(contactUs.alertMessage)
 
