@@ -1,25 +1,29 @@
+import { navigationMenu } from '../../dictionaries/selectors/index.ts'
+import * as dotenv from 'dotenv'
+
+const envFound = dotenv.config();
+if (envFound.error) {
+    throw new Error("Couldn't find .env file");
+}
+const env = process.env
+
 describe('Language Translation', () => {
     it('Language Translation Test', async () => {
-        const url = 'https://staging-new.a2odev.com/'
-        await browser.url(url)
-        await browser.pause(3000)
+        await browser.url(env.A2O_DEV_URL)
         await browser.maximizeWindow()
 
-        const languageLink =await $('//*[@id="premium-nav-menu-item-8907"]')
-        const subMenuLink=await $('//*[@id="premium-nav-menu-item-8907"]/ul')
-        const spanishFlag = await $('img[title="Spanish"]')
+        const languageLink = await $(navigationMenu.languageLink)
+        const subMenuLink = await $(navigationMenu.subMenuLink)
+        const spanishFlag = await $(navigationMenu.spanishFlag)
 
         languageLink.moveTo({})
         await expect($(spanishFlag)).toBeExisting()
-        subMenuLink.click()
-        await browser.pause(3000)
-        await expect(browser).toHaveUrl(url + 'es/')
-        await browser.pause(3000)
+        await subMenuLink.click()
+        await expect(browser).toHaveUrl(env.A2O_DEV_URL + 'es/')
 
         languageLink.moveTo({})
-        subMenuLink.click()
-        await browser.pause(3000)
-        await expect(browser).toHaveUrl(url)
-        await browser.pause(3000)
+        await subMenuLink.click()
+        await expect(browser).toHaveUrl(env.A2O_DEV_URL)
+
     })
 })
