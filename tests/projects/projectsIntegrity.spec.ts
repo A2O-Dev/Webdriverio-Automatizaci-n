@@ -1,43 +1,46 @@
+import { navigationMenu, projects }  from '../../dictionaries/selectors/index.ts'
+import * as dotenv from 'dotenv'
+
+const envFound = dotenv.config();
+if (envFound.error) {
+  throw new Error("Couldn't find .env file");
+}
+const env = process.env
 describe('Projects Integrity', () => {
-    it('Projects Integrity laptop', async () => {
-      await browser.url('https://staging-new.a2odev.com/')
-      await browser.maximizeWindow()
+  it('Projects Integrity laptop', async () => {
+    await browser.url(env.A2O_DEV_URL)
+    await browser.maximizeWindow()
 
-      const projectLink = await $('=Projects')
-      const contactUsForm = await $('=Contact us')
-      const castingApp = await $('div[id="text-one"]')
-      const imageApp = await $('.premium-modal-trigger-text=Images App')
-      const realEstateApp = await $('.premium-modal-trigger-text=Real Estate App')
-      
-      projectLink.click()
-      await expect($('h1=Latest Projects')).toBeExisting()
-      await expect($('p=Check out our latest projects.')).toBeExisting()
-      await browser.pause(2000)
-      
-      const paragraphCastingApp = await $('//*[@id="box-one"]/div/div[3]/div/span')
-      castingApp.moveTo({})
-      await expect($('[data-target="#premium-modal-60d65cc"]')).toBeExisting()
-      await expect($(paragraphCastingApp)).toBeExisting()
-      console.log(paragraphCastingApp.getText())
-      await browser.pause(2000)
-      
-      const paragraphImagesgApp = await $('//*[@id="box-two"]/div/div[3]/div/span')
-      imageApp.moveTo({})
-      await expect($('[data-target="#premium-modal-0e595b4"]')).toBeExisting()
-      await expect($(paragraphImagesgApp)).toBeExisting()
-      console.log(paragraphImagesgApp.getText())
-      await browser.pause(2000)
+    const projectLink = await $(navigationMenu.projectsLink) 
+    
+    const castingApp = await $(projects.castingAppLink) 
+    const imageApp = await $(projects.imagesAppLink)
+    const realEstateApp = await $(projects.realEstateApp)
 
-      const paragraphRealEstateApp = await $('//*[@id="box-three"]/div/div[3]/div/span')
-      realEstateApp.moveTo({})
-      await expect($('[data-target="#premium-modal-06403d4"]')).toBeExisting()
-      await expect($(paragraphRealEstateApp)).toBeExisting()
-      console.log(paragraphRealEstateApp.getText())
-      await browser.pause(2000)
-
-      contactUsForm.click()
-      await expect($('h3=Contact Us')).toBeExisting()
-      await browser.pause(2000)
+    await projectLink.click()
+    await expect($(projects.mainProjecttitle)).toBeExisting()
+    await expect($(projects.projectSubtitle)).toBeExisting()
+    
+    await browser.pause(3000)
+    const paragraphCastingApp = await $(projects.paragraphCastingApp)
+    castingApp.moveTo({})
+    await expect($(projects.imgCasting)).toBeExisting()
+    await expect($(paragraphCastingApp)).toBeExisting()
+    console.log(paragraphCastingApp.getText())
+  
+    await browser.pause(3000)
+    const paragraphImagesgApp = await $(projects.paragraphImagesgApp)
+    imageApp.moveTo({})
+    await expect($(projects.imgApp)).toBeExisting()
+    await expect($(paragraphImagesgApp)).toBeExisting()
+    console.log(paragraphImagesgApp.getText())
+    
+    await browser.pause(3000)
+    const paragraphRealEstateApp = await $(projects.paragraphRealEstateApp)
+    realEstateApp.moveTo({})
+    await expect($(projects.imgRealEstate)).toBeExisting()
+    await expect($(paragraphRealEstateApp)).toBeExisting()
+    console.log(paragraphRealEstateApp.getText())
     })
     
 })
