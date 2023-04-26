@@ -7,8 +7,7 @@ if (envFound.error) {
 }
 const env = process.env
 describe('Contact us form email wrong', () => {
-  ///first scenario
-  it('check de format email n°1', async () => {
+  it('check e-mail format n°1', async () => {
     await browser.url(env.A2O_DEV_URL)
     await browser.maximizeWindow()
 
@@ -23,8 +22,8 @@ describe('Contact us form email wrong', () => {
     await expect($(alertMessage)).toBeExisting()
     await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
   })
-  ///second scenario 
-  it('check de format email n°2', async () => {
+
+  it('check e-mail format n°2', async () => {
     await browser.url(env.A2O_DEV_URL)
     await browser.maximizeWindow()
 
@@ -39,8 +38,8 @@ describe('Contact us form email wrong', () => {
     await expect($(alertMessage)).toBeExisting()
     await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
   })
-  ///third scenario
-  it('check de format email n°3', async () => {
+
+  it('check e-mail format n°3', async () => {
     await browser.url(env.A2O_DEV_URL)
     await browser.maximizeWindow()
 

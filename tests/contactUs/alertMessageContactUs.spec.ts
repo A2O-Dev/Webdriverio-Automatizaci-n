@@ -7,7 +7,6 @@ if (envFound.error) {
 }
 const env = process.env
 describe('Alert message when submitting with empty required fields', () => {
-    //first scenario
     it('Alert Message with the Name empty ', async () => {
         await browser.url(env.A2O_DEV_URL)
         await browser.maximizeWindow()
@@ -23,7 +22,7 @@ describe('Alert message when submitting with empty required fields', () => {
         await expect($(alertMessage)).toBeExisting()
         await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
     })
-    //second scenario 
+
     it('Alert Message with the Email empty ', async () => {
         await browser.url(env.A2O_DEV_URL)
         await browser.maximizeWindow()
@@ -39,7 +38,7 @@ describe('Alert message when submitting with empty required fields', () => {
         await expect($(alertMessage)).toBeExisting()
         await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
     })
-    //third scenario
+   
     it('Alert Message with the Message empty ', async () => {
         await browser.url(env.A2O_DEV_URL)
         await browser.maximizeWindow()
