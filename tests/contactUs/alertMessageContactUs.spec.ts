@@ -1,44 +1,54 @@
-describe('Alert message when submitting with empty required fields', () => {
+import { contactUs } from '../../dictionaries/selectors/index.ts'
+import * as dotenv from 'dotenv'
 
-    it('should have a complete UI', async () => {
-        await browser.url('https://staging-new.a2odev.com/')
-        await browser.pause(3000)
+const envFound = dotenv.config();
+if (envFound.error) {
+    throw new Error("Couldn't find .env file");
+}
+const env = process.env
+describe('Alert message when submitting with empty required fields', () => {
+    //first scenario
+    it('Alert Message with the Name empty ', async () => {
+        await browser.url(env.A2O_DEV_URL)
         await browser.maximizeWindow()
 
-        await expect($('#name')).toBeExisting()
-        await expect($('#email')).toBeExisting()
-        await expect($('.wpcf7-textarea')).toBeExisting()
-        await expect($('button[type="submit"]')).toBeExisting()
+        const alertMessage = await $(contactUs.alertMessage)
+
+        await $(contactUs.name).setValue(env.EMPTY_NAME)
+        await $(contactUs.email).setValue(env.EMAIL_ADDRESS)
+        await $(contactUs.website).setValue(env.WEDSITE)
+        await $(contactUs.message).setValue(env.WRITE_MESSAGE)
+        await $(contactUs.btnSubmit).click()
+
+        await expect($(alertMessage)).toBeExisting()
+        await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
     })
+    //second scenario 
+    it('Alert Message with the Email empty ', async () => {
 
-    it('Check Alert message ', async () => {
-        const btnSubmit = await $('button[type="submit"]')
-        const alertMessage = await $('.wpcf7-response-output=One or more fields have an error. Please check and try again.')
+        const alertMessage = await $(contactUs.alertMessage)
 
-        // Alert Message with the Name empty
-        await $('#name').setValue('')
-        await $('#email').setValue('test@mail.com')
-        await $('[name="message"]').setValue('Test with Name empty')
-        await btnSubmit.click()
-        await expect (alertMessage).toBeExisting()
-        await browser.pause(3000)
+        await $(contactUs.name).setValue(env.YOUR_NAME)
+        await $(contactUs.email).setValue(env.EMPTY_EMAIL)
+        await $(contactUs.website).setValue(env.WEDSITE)
+        await $(contactUs.message).setValue(env.WRITE_MESSAGE)
+        await $(contactUs.btnSubmit).click()
 
-        // Alert Message with the Email empty
-        await $('#name').setValue('TestQA')
-        await $('#email').setValue('')
-        await $('[name="message"]').setValue('Test with Email empty')
-        await btnSubmit.click()
-        await expect (alertMessage).toBeExisting()
-        await browser.pause(3000)
-
-        // Alert Message with the Message empty
-        await $('#name').setValue('TestQA')
-        await $('#email').setValue('test@mail.com')
-        await $('[name="message"]').setValue('')
-        await btnSubmit.click()
-        await expect (alertMessage).toBeExisting()
-        await browser.pause(3000)
-
+        await expect($(alertMessage)).toBeExisting()
+        await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
     })
+    //third scenario
+    it('Alert Message with the Message empty ', async () => {
 
+        const alertMessage = await $(contactUs.alertMessage)
+
+        await $(contactUs.name).setValue(env.YOUR_NAME)
+        await $(contactUs.email).setValue(env.EMAIL_ADDRESS)
+        await $(contactUs.website).setValue(env.WEDSITE)
+        await $(contactUs.message).setValue(env.EMPTY_MESSAGE)
+        await $(contactUs.btnSubmit).click()
+
+        await expect($(alertMessage)).toBeExisting()
+        await expect($(alertMessage)).toHaveTextContaining('One or more fields have an error. Please check and try again.')
+    })
 })
