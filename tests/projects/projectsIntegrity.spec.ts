@@ -21,21 +21,20 @@ describe('Projects Integrity', () => {
     await expect($(projects.mainProjecttitle)).toBeExisting()
     await expect($(projects.projectSubtitle)).toBeExisting()
     
-    await browser.pause(3000)
+    
     const paragraphCastingApp = await $(projects.paragraphCastingApp)
     castingApp.moveTo({})
     await expect($(projects.imgCasting)).toBeExisting()
     await expect($(paragraphCastingApp)).toBeExisting()
     console.log(paragraphCastingApp.getText())
   
-    await browser.pause(3000)
     const paragraphImagesgApp = await $(projects.paragraphImagesgApp)
     imageApp.moveTo({})
     await expect($(projects.imgApp)).toBeExisting()
     await expect($(paragraphImagesgApp)).toBeExisting()
     console.log(paragraphImagesgApp.getText())
     
-    await browser.pause(3000)
+    
     const paragraphRealEstateApp = await $(projects.paragraphRealEstateApp)
     realEstateApp.moveTo({})
     await expect($(projects.imgRealEstate)).toBeExisting()
