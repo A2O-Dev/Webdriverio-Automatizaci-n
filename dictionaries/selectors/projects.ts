@@ -1,7 +1,19 @@
 export const projects = {
-  castingAppLink         :'.premium-modal-trigger-text=Casting App',
+  mainProjectTitle       :'h1=Latest Projects',
+  projectSubtitle        :'p=Check out our latest projects.',
+
+  castingAppLink         :'#text-one',
   imagesAppLink          :'.premium-modal-trigger-text=Images App',
-  realEstateApp          :'.premium-modal-trigger-text=Real Estate App',
+  realStateApp          :'.premium-modal-trigger-text=Real Estate App',
+
+  paragraphCastingApp    :'//span[contains(text(),"Web App to cast and find actors, crew, locations, ")]',
+  paragraphImagesApp     :'//span[contains(text(),"Web App development to Rotate, flip, duplicate, an")]',
+  paragraphRealStateApp  :'//span[contains(text(),"Multiplatform app for buying/selling property titl")]',
+
+  imgCasting             :'img[alt="blog-1"]',
+  imgApp                 :'img[alt="vetimages_project"]',
+  imgRealState           :'img[alt="12_alte_project-1024x664-1"]',
+
   arrowRightCasting      :'[id="n2-ss-9-arrow-next"]',
   arrowLeftCasting       :'[id="n2-ss-9-arrow-previous"]',
   closeButtonCasting     :'//*[@id="premium-modal-07734af"]/div/div[1]/div/button',
@@ -11,10 +23,5 @@ export const projects = {
   arrowRightReal         :'id="n2-ss-11-arrow-next"',
   arrowLeftReal          :'id="n2-ss-11-arrow-previous"',
   closeButtonReal        :'//*[@id="premium-modal-3da65c0"]/div/div[1]/div/button',
-  imageRealEstateApp     :'//*[@id="n2-ss-11"]/div/div[1]/div/div/div[2]/div[1]/div[2]/div',
-  castingApp             :'div[id="text-one"]',
-  imageApp               :'.premium-modal-trigger-text=Images App',
-  paragraphCastingApp    :'//*[@id="box-one"]/div/div[3]/div/span',
-  paragraphImagesgApp    :'//*[@id="box-two"]/div/div[3]/div/span',
-  paragraphRealEstateApp :'//*[@id="box-three"]/div/div[3]/div/span',
+
 }
