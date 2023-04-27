@@ -15,10 +15,10 @@ describe('Projects Integrity', () => {
     
     const castingApp = await $(projects.castingAppLink) 
     const imageApp = await $(projects.imagesAppLink)
-    const realEstateApp = await $(projects.realEstateApp)
+    const realStateApp = await $(projects.realStateApp)
 
     await projectLink.click()
-    await expect($(projects.mainProjecttitle)).toBeExisting()
+    await expect($(projects.mainProjectTitle)).toBeExisting()
     await expect($(projects.projectSubtitle)).toBeExisting()
     
     
@@ -28,18 +28,18 @@ describe('Projects Integrity', () => {
     await expect($(paragraphCastingApp)).toBeExisting()
     console.log(paragraphCastingApp.getText())
   
-    const paragraphImagesgApp = await $(projects.paragraphImagesgApp)
+    const paragraphImagesgApp = await $(projects.paragraphImagesApp)
     imageApp.moveTo({})
     await expect($(projects.imgApp)).toBeExisting()
     await expect($(paragraphImagesgApp)).toBeExisting()
     console.log(paragraphImagesgApp.getText())
     
     
-    const paragraphRealEstateApp = await $(projects.paragraphRealEstateApp)
-    realEstateApp.moveTo({})
-    await expect($(projects.imgRealEstate)).toBeExisting()
-    await expect($(paragraphRealEstateApp)).toBeExisting()
-    console.log(paragraphRealEstateApp.getText())
+    const paragraphRealSstateApp = await $(projects.paragraphRealStateApp)
+    realStateApp.moveTo({})
+    await expect($(projects.imgRealState)).toBeExisting()
+    await expect($(paragraphRealSstateApp)).toBeExisting()
+    console.log(paragraphRealSstateApp.getText())
     })
     
 })

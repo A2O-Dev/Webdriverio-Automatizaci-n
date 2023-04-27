@@ -1,18 +1,18 @@
 export const projects = {
-  mainProjecttitle       :'h1=Latest Projects',
+  mainProjectTitle       :'h1=Latest Projects',
   projectSubtitle        :'p=Check out our latest projects.',
 
   castingAppLink         :'#text-one',
   imagesAppLink          :'.premium-modal-trigger-text=Images App',
-  realEstateApp          :'.premium-modal-trigger-text=Real Estate App',
+  realStateApp          :'.premium-modal-trigger-text=Real Estate App',
 
   paragraphCastingApp    :'//span[contains(text(),"Web App to cast and find actors, crew, locations, ")]',
-  paragraphImagesgApp    :'//span[contains(text(),"Web App development to Rotate, flip, duplicate, an")]',
-  paragraphRealEstateApp :'//span[contains(text(),"Multiplatform app for buying/selling property titl")]',
+  paragraphImagesApp     :'//span[contains(text(),"Web App development to Rotate, flip, duplicate, an")]',
+  paragraphRealStateApp  :'//span[contains(text(),"Multiplatform app for buying/selling property titl")]',
 
   imgCasting             :'img[alt="blog-1"]',
   imgApp                 :'img[alt="vetimages_project"]',
-  imgRealEstate          :'img[alt="12_alte_project-1024x664-1"]',
+  imgRealState           :'img[alt="12_alte_project-1024x664-1"]',
 
   arrowRightCasting      :'[id="n2-ss-9-arrow-next"]',
   arrowLeftCasting       :'[id="n2-ss-9-arrow-previous"]',
