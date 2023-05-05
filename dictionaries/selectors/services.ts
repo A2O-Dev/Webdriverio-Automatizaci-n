@@ -3,6 +3,15 @@ export const services = {
   webSiteLink            :'.elementor-icon-box-title=Web Site Development',
   mobileDevLink          :'.elementor-icon-box-title=Mobile Development',
   otherSolutionLink      :'.elementor-icon-box-title=Other Solutions',
-  MobileDevLink          :'div[data-column-clickable="https://staging-new.a2odev.com/mobile-development/"]',
-  otherSolLink           :'div[data-column-clickable="https://staging-new.a2odev.com/other-solutions/"',
+
+   webAppTitle           :'h2=Web App Development',
+   webSiteTitle          :'h2=Website Development',
+   mobileDevTitle        :'h2=Mobile App Dev',
+   otherSolutionTitle    :'h2=Website Development',
+
+   tilteServices         :'[id="smart-solutions"]',
+   subTilteServices      :'p=Web Development Solutions to launch your Ideas to the Cloud.',
+   listPrecise           :'//li[@class="elementor-icon-list-item"][1]',
+   listEarly             :'//li[@class="elementor-icon-list-item"][2]', 
+   listDesign            :'//li[@class="elementor-icon-list-item"][3]',
 }

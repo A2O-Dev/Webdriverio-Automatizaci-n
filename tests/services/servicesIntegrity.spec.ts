@@ -1,34 +1,39 @@
+import { navigationMenu, services }  from '../../dictionaries/selectors/index.js'
+import * as dotenv from 'dotenv'
+
+const envFound = dotenv.config();
+if (envFound.error) {
+  throw new Error("Couldn't find .env file");
+}
+const env = process.env
 describe('Services Integrity', () => {
-    it('Services Integrity laptop', async () => {
-      await browser.url('https://staging-new.a2odev.com/')
-      await browser.maximizeWindow()
-      
-      const servicesLink = await $('=Services')
-      const webAppsLink = await $('div[data-column-clickable="https://staging-new.a2odev.com/web-app-development/"]')
-      const webSiteLink = await $('div[data-column-clickable="https://staging-new.a2odev.com/website-development/"]')
-      const MobileDevLink = await $('div[data-column-clickable="https://staging-new.a2odev.com/mobile-development/"]')
-      const otherSolLink = await $('div[data-column-clickable="https://staging-new.a2odev.com/other-solutions/"')
-      
-      servicesLink.click()
-      await browser.pause(3000)
-      webAppsLink.moveTo({})
-      webSiteLink.moveTo({})
-      MobileDevLink.moveTo({})
-      otherSolLink.moveTo({})
+  it('Services Integrity laptop', async () => {
+    await browser.url(env.A2O_DEV_URL)
+    await browser.maximizeWindow()
 
-      await browser.pause(3000)
-      await expect($('.elementor-icon-box-title=Web Apps Development')).toBeExisting()
-      await expect($('.elementor-icon-box-title=Web Site Development')).toBeExisting()
-      await expect($('.elementor-icon-box-title=Mobile Development')).toBeExisting()
-      await expect($('.elementor-icon-box-title=Other Solutions')).toBeExisting()
+    const servicesLink = await $(navigationMenu.servicesLink)
+    const webAppsLink = await $(services.webAppsLink)
+    const webSiteLink = await $(services.webSiteLink)
+    const MobileDevLink = await $(services.mobileDevLink)
+    const otherSolLink = await $(services.otherSolutionLink)
 
-      await browser.pause(3000)
-      await expect($('[id="smart-solutions"]')).toBeExisting()
-      await expect($('p=Web Development Solutions to launch your Ideas to the Cloud.')).toBeExisting()
-      await expect($('//*[@id="services"]/div/div[2]/div/div[3]/div/ul/li[1]')).toHaveTextContaining('Precise solutions for required problems')
-      await expect($('//*[@id="services"]/div/div[2]/div/div[3]/div/ul/li[2]')).toHaveTextContaining('Early deliveries of results and reception of feedback')
-      await expect($('//*[@id="services"]/div/div[2]/div/div[3]/div/ul/li[3]')).toHaveTextContaining('Design with scalability in mind for future implementations')
-      
-      await browser.pause(3000)
-    })
+    await servicesLink.click()
+    webAppsLink.moveTo({})
+    webSiteLink.moveTo({})
+    MobileDevLink.moveTo({})
+    otherSolLink.moveTo({})
+
+    await expect($(services.webAppsLink)).toBeExisting()
+    await expect($(services.webSiteLink)).toBeExisting()
+    await expect($(services.mobileDevLink)).toBeExisting()
+    await expect($(services.otherSolutionLink)).toBeExisting()
+
+    await browser.pause(3000)
+    await expect($(services.tilteServices)).toBeExisting()
+    await expect($(services.subTilteServices)).toBeExisting()
+    await expect($(services.listPrecise)).toHaveTextContaining('Precise solutions for required problems')
+    await expect($(services.listEarly)).toHaveTextContaining('Early deliveries of results and reception of feedback')
+    await expect($(services.listDesign)).toHaveTextContaining('Design with scalability in mind for future implementations')
+
+  })
 })
