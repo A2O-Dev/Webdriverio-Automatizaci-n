@@ -28,7 +28,6 @@ describe('Services Integrity', () => {
     await expect($(services.mobileDevLink)).toBeExisting()
     await expect($(services.otherSolutionLink)).toBeExisting()
 
-    await browser.pause(3000)
     await expect($(services.tilteServices)).toBeExisting()
     await expect($(services.subTilteServices)).toBeExisting()
     await expect($(services.listPrecise)).toHaveTextContaining('Precise solutions for required problems')
