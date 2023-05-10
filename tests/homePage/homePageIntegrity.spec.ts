@@ -17,11 +17,9 @@ describe('Home Page Integrity', () => {
         const faqLink = await $(navigationMenu.faqLink)
         const contactUsLink = await $(navigationMenu.contactUsLink)
         const languageLink = await $(navigationMenu.languageLink)
-
         const smartCard = await $(navigationMenu.smartCard)
         const interactiveCard = await $(navigationMenu.interactiveCard)
         const readyCard = await $(navigationMenu.readyCard)
-
         const goToTopButton = await $(footer.goToTopButton)
 
         await expect($(navigationMenu.logoTypeImg)).toBeExisting()
