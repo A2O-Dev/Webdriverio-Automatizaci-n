@@ -4,6 +4,6 @@ export const footer = {
   linkedinLink           :'a[href="https://bo.linkedin.com/company/a2odev"]',
   fabLink                :'.fab.fa-dribbble',
   
-  goToTopButton          :'//*[@id="post-1934"]/div/div/section[7]/div/div/div/div/div/div/a',
+  goToTopButton          :'a[href="#scroll-up"]',
   testimonialCardLeft    :'.swiper-slide-active .slick-slide'
 }
