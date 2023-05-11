@@ -9,8 +9,8 @@ export const services = {
    mobileDevTitle        :'h2=Mobile App Dev',
    otherSolutionTitle    :'h2=Website Development',
 
-   tilteServices         :'[id="smart-solutions"]',
-   subTilteServices      :'p=Web Development Solutions to launch your Ideas to the Cloud.',
+   titleServices         :'[id="smart-solutions"]',
+   subTitleServices      :'p=Web Development Solutions to launch your Ideas to the Cloud.',
    listPrecise           :'//li[@class="elementor-icon-list-item"][1]',
    listEarly             :'//li[@class="elementor-icon-list-item"][2]', 
    listDesign            :'//li[@class="elementor-icon-list-item"][3]',
