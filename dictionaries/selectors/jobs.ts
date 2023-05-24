@@ -7,5 +7,6 @@ export const jobs = {
   skillRequirements      :'h3=Habilidades y conocimientos requerimientos',  
   extras                 :'h3=Extras',
   applyNow               :'h1=Postúlate ahora!',
-  notes                  :'//p[normalize-space()="Notas:"]'
+  notes                  :'//p[normalize-space()="Notas:"]',
+  btnGoToTop             :'a[href="#subjobpanel-up"]',
 }
