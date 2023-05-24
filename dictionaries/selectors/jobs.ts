@@ -6,7 +6,14 @@ export const jobs = {
   responsibilities       :'h3=Responsabilidades',
   applyNow               :'h1=Postúlate ahora!',
   notes                  :'.elementor-element-263ceb46 .elementor-widget-container',
-  jobAppForm             :'//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[1]/a',
-  teoryTestForm          :'//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[2]/a',
-  logicalTest            :'//*[@id="post-15750"]/div/div/section[3]/div/div/div/div[9]/div/ul/li[3]/span/a',
+  
+
+  linkJobAppForm         :'a[href="https://forms.gle/A8UjXknbWKTY8sp37"]',
+  linkTheoryTestForm     :'a[href="https://forms.gle/LFcrhtw6adE1nqeq9"]',
+  linkLogicalTestForm    :'a[href="https://forms.gle/C4nPVQ3UpCrTEgfY9"]',
+  inputEmail             :'#identifierId',
+  inputPass              :'input[type="password"]',
+  btnNext                :'#identifierNext',
+  btnPass                :'#passwordNext',
 }
+
