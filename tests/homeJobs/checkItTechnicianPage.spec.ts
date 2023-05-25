@@ -1,5 +1,5 @@
 import { jobs, navigationMenu } from '../../dictionaries/selectors/index.ts'
-import { urls, credentials } from '../../dictionaries/config/index.ts'
+import { urls } from '../../dictionaries/config/index.ts'
 
 describe('Check the "IT Technician and Data Center" page', () => {
   it('IT Technician and Data Center page', async () => {
@@ -13,7 +13,6 @@ describe('Check the "IT Technician and Data Center" page', () => {
     const faqLink = await $(navigationMenu.faqLink)
     const contactUsLink = await $(navigationMenu.contactUsLink)
     const languageLink = await $(navigationMenu.languageLink)
-
     const firstTitle = await $(jobs.firstTitle)
     const pageNav = await $(jobs.pageNav)
     const pageNavHome = await $(jobs.pageNavHome)
