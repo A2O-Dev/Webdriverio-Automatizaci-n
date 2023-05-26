@@ -10,5 +10,6 @@ const host = env.A2O_DEV_URL ?? 'https://staging-new.a2odev.com'
 
 export const urls = {
   host,
-  jobsTtTechnician: `${host}/jobs/it-technician/`
+  jobsTtTechnician: `${host}/jobs/it-technician/`,
+  jobs:             `${host}/jobs`,
 }

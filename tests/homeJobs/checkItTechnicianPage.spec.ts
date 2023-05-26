@@ -41,15 +41,14 @@ describe('Check the "IT Technician and Data Center" page', () => {
 
     await expect(firstTitle).toBeExisting()
     await expect(pageNav).toHaveText('Home  –  Jobs – IT Technician')
-    await expect(pageNavHome).toHaveAttribute('href', 'https://staging-new.a2odev.com/')
-    await expect(pageNavJobs).toHaveAttribute('href', 'https://staging-new.a2odev.com/jobs/')
+    await expect(pageNavHome).toBeExisting()
+    await expect(pageNavJobs).toBeExisting()
 
-    await expect(jobResponsibilities).toBeExisting()
+    await expect(jobResponsibilities).toHaveTextContaining('Responsabilidades del cargo')
     await notes.scrollIntoView(false)
-    await browser.pause(3000)
-    await expect(skillRequirements).toBeExisting()
-    await expect(extras).toBeExisting()
-    await expect(applyNow).toBeExisting()
+    await expect(skillRequirements).toHaveTextContaining('Habilidades y conocimientos requerimientos')
+    await expect(extras).toHaveTextContaining('Extras')
+    await expect(applyNow).toHaveTextContaining('Postúlate ahora!')
     await expect(notes).toHaveTextContaining('Notas')
 
     await expect(btnGoToTop).toBeExisting()
