@@ -1,12 +1,14 @@
 export const jobs = {
-  firstTitle             :'h1=People Management Assistant',
-  navMain                :'//*[@class="elementor-widget-container"]/p',
-  requirements           :'h3=Requerimientos',
+  firstTitle             :'h1=IT Technician & Data Center',
+  pageNav                :'//section[@id="subjobpanel-up"]//p[1]',
+  pageNavHome            :'=Home',
+  pageNavJobs            :'=Jobs',
+  jobResponsibilities    :'h3=Responsabilidades del cargo',
+  skillRequirements      :'h3=Habilidades y conocimientos requerimientos',  
   extras                 :'h3=Extras',
-  responsibilities       :'h3=Responsabilidades',
   applyNow               :'h1=Postúlate ahora!',
-  notes                  :'.elementor-element-263ceb46 .elementor-widget-container',
-  
+  notes                  :'//p[normalize-space()="Notas:"]',
+  btnGoToTop             :'a[href="#subjobpanel-up"]',
 
   linkJobAppForm         :'a[href="https://forms.gle/A8UjXknbWKTY8sp37"]',
   linkTheoryTestForm     :'a[href="https://forms.gle/LFcrhtw6adE1nqeq9"]',
