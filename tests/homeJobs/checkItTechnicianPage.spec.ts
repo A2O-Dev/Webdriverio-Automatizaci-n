@@ -3,7 +3,7 @@ import { urls } from '../../dictionaries/config/index.ts'
 
 describe('Check the "IT Technician and Data Center" page', () => {
   it('IT Technician and Data Center page', async () => {
-    await browser.url(urls.jobsTtTechnician)
+    await browser.url(urls.jobsItTechnician)
     await browser.maximizeWindow()
 
 
