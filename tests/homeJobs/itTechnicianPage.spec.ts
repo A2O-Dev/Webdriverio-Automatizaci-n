@@ -3,7 +3,7 @@ import { urls, credentials } from '../../dictionaries/config/index.ts'
 
 describe('Check the links to the "Postúlate ahora" forms.', () => {
   it('IT Technician page', async () => {
-    await browser.url(urls.jobsTtTechnician)
+    await browser.url(urls.jobsItTechnician)
     await browser.maximizeWindow()
 
     const linkJobAppForm = await $(jobs.linkJobAppForm)
@@ -26,17 +26,17 @@ describe('Check the links to the "Postúlate ahora" forms.', () => {
     await browser.setTimeout({'implicit':2000})
     await inputPass.setValue(credentials.google.password)
     await btnPass.click()
-    await browser.url(urls.jobsTtTechnician)
+    await browser.url(urls.jobsItTechnician)
 
     await linkJobAppForm.scrollIntoView({ block: 'center', inline: 'center' })
     await linkTheoryTestForm.click()
     await expect($(linkTheoryTestForm)).toBeExisting
-    await browser.url(urls.jobsTtTechnician)
+    await browser.url(urls.jobsItTechnician)
     
     await linkJobAppForm.scrollIntoView({ block: 'center', inline: 'center' })
     await linkLogicalTestForm.click()
     await expect(linkLogicalTestForm).toBeExisting
-    await browser.url(urls.jobsTtTechnician)
+    await browser.url(urls.jobsItTechnician)
     
   })
 })
