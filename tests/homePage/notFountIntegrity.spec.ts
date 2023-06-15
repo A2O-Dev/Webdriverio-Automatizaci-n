@@ -18,6 +18,5 @@ describe('Check Not Found Integrity', () => {
         await expect(linkHomePage).toHaveTextContaining('Take me to the Home Page')
         await linkHomePage.click()
         await browser.url(urls.host)
-
     })
 })
