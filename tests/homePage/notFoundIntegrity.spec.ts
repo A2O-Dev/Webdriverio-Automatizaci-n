@@ -1,5 +1,5 @@
-import { found } from '../../dictionaries/selectors/index.js'
-import { urls } from '../../dictionaries/config/index.js'
+import { found } from '../../dictionaries/selectors/index.ts'
+import { urls } from '../../dictionaries/config/index.ts'
 
 describe('Check Not Found Integrity', () => {
     it('Check Url: Not Found', async () => {
