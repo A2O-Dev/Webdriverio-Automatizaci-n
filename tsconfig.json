@@ -3,12 +3,12 @@
         "moduleResolution": "node",
         "module": "ESNext",
         "typeRoots": [
-            "./node_modules/@types/"
-          ],
+            "./node_modules/"
+            ],
         "types": [
             "node",
             "@wdio/globals/types",
-            "@types/mocha",
+            "expect-webdriverio",
             "@wdio/mocha-framework"
         ],
         "target": "es2022"
