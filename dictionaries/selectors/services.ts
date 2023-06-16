@@ -9,6 +9,12 @@ export const services = {
    mobileDevTitle        :'h2=Mobile App Dev',
    otherSolutionTitle    :'h2=Website Development',
 
+   SolutionsFirstTitle   :'h2=Other Solutions',
+   paragraph             :'p=Other services we excel in:',
+   item1                 :'.elementor-icon-list-items li:nth-child(1)',
+   item2                 :'.elementor-icon-list-items li:nth-child(2)',
+   item3                 :'.elementor-icon-list-items li:nth-child(3)',
+
    titleServices         :'[id="smart-solutions"]',
    subTitleServices      :'p=Web Development Solutions to launch your Ideas to the Cloud.',
    listPrecise           :'//li[@class="elementor-icon-list-item"][1]',
