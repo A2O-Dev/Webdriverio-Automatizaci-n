@@ -13,5 +13,6 @@ export const urls = {
   notFound:          `${host}/404Page/`,
   jobsDevopsEngineer:`${host}/dev-ops-engineer/`,
   jobsItTechnician:  `${host}/jobs/it-technician/`,
+  otherSolutions:    `${host}/other-solutions/`,
   jobs:              `${host}/jobs`
 }
