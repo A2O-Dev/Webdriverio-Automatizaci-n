@@ -20,4 +20,17 @@ export const services = {
    listPrecise           :'//li[@class="elementor-icon-list-item"][1]',
    listEarly             :'//li[@class="elementor-icon-list-item"][2]', 
    listDesign            :'//li[@class="elementor-icon-list-item"][3]',
+  
+   webSiteFirstTitle     :'h2=Website Development',
+   WebSiteParagraph      :'p=Update your existing website to the latest technologies, or create one from scratch!',
+   webItem1                 :'//span[normalize-space()="WordPress"]',
+   webItem2                 :'//span[normalize-space()="Wix"]',
+   webItem3                 :'//span[normalize-space()="E-commerce"]',
+   webItem4                 :'//span[normalize-space()="Woocommerce"]',
+   webItem5                 :'//span[normalize-space()="Integration with Stripe"]',
+   webItem6                 :'//span[normalize-space()="Integration with Paypal"]',
+   webItem7                 :'//span[normalize-space()="Integration with other microservices and APIs"]',
+   webImage                 :'(//div[@class="elementor-widget-container"])[3]',
+ 
+
 }

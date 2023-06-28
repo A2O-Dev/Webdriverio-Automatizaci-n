@@ -6,7 +6,7 @@ describe('Check the integrity of the UI of the Other Solutions page in Services'
         await browser.url(urls.otherSolutions)
         await browser.maximizeWindow()
 
-        // Variables
+  
         const aboutUsLink = await $(navigationMenu.aboutUsLink)
         const servicesLink = await $(navigationMenu.servicesLink)
         const projectsLink = await $(navigationMenu.projectsLink)
