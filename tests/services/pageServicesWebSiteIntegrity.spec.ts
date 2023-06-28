@@ -7,13 +7,13 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
         await browser.url(urls.webSiteDevelopment)
         await browser.maximizeWindow()
 
-        
+
         const aboutUsLink = await $(navigationMenu.aboutUsLink)
         const servicesLink = await $(navigationMenu.servicesLink)
         const projectsLink = await $(navigationMenu.projectsLink)
         const faqLink = await $(navigationMenu.faqLink)
         const contactUsLink = await $(navigationMenu.contactUsLink)
-        const englishFlag  = await $(navigationMenu.englishFlag)
+        const englishFlag = await $(navigationMenu.englishFlag)
 
         const webSiteFirstTitle = await $(services.webSiteFirstTitle)
         const WebSiteParagraph = await $(services.WebSiteParagraph)
@@ -40,15 +40,15 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
         const homePage = await $(footer.fabLink)
         const btnScrollUp = await $(footer.goToTopButton)
 
-        
+
         await expect(aboutUsLink).toHaveTextContaining('About us')
         await expect(servicesLink).toHaveTextContaining('Services')
         await expect(projectsLink).toHaveTextContaining('Projects')
         await expect(faqLink).toHaveTextContaining('FAQ')
         await expect(contactUsLink).toHaveTextContaining('Contact us')
         await expect(englishFlag).toBeExisting()
-     
-       
+
+
         await expect(webSiteFirstTitle).toBeExisting()
         await expect(image).toBeExisting()
         await expect(WebSiteParagraph).toBeExisting()
@@ -69,13 +69,13 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
         await expect(inputMessage).toBeExisting()
         await expect(btnSubmit).toBeExisting()
 
-   
+
         await scrollContact.scrollIntoView({ block: 'center', inline: 'center' })
         await expect(facebookLink).toBeExisting()
         await expect(twitterLink).toBeExisting()
         await expect(linkedinLink).toBeExisting()
         await expect(homePage).toBeExisting()
-     
+
 
         await expect(btnScrollUp).toHaveAttribute('class', 'elementor-icon active')
         await btnScrollUp.click()
