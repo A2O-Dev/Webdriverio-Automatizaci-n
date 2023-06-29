@@ -9,15 +9,23 @@ export const services = {
    mobileDevTitle        :'h2=Mobile App Dev',
    otherSolutionTitle    :'h2=Website Development',
 
-   SolutionsFirstTitle   :'h2=Other Solutions',
-   paragraph             :'p=Other services we excel in:',
-   item1                 :'.elementor-icon-list-items li:nth-child(1)',
-   item2                 :'.elementor-icon-list-items li:nth-child(2)',
-   item3                 :'.elementor-icon-list-items li:nth-child(3)',
-
    titleServices         :'[id="smart-solutions"]',
    subTitleServices      :'p=Web Development Solutions to launch your Ideas to the Cloud.',
    listPrecise           :'//li[@class="elementor-icon-list-item"][1]',
    listEarly             :'//li[@class="elementor-icon-list-item"][2]', 
    listDesign            :'//li[@class="elementor-icon-list-item"][3]',
-}
+   
+   mobileFirstTitle      :'h2=Mobile App Dev',
+   mobileParagraph       :'(//div[@class="elementor-widget-container"])[5]',
+   mobileItem1           :'//span[normalize-space()="UI/UX with Material Design"]',
+   mobileItem2           : '//span[normalize-space()="IOS and Android with React Native"]',
+   mobileItem3           :'//span[normalize-space()="Publish to stores"]',
+   mobileImage           :'.elementor-element-66f1e757 .elementor-widget-container img',
+  
+   SolutionsFirstTitle   :'h2=Other Solutions',
+   paragraph             :'p=Other services we excel in:',
+   item1                 :'.elementor-icon-list-items li:nth-child(1)',
+   item2                 :'.elementor-icon-list-items li:nth-child(2)',
+   item3                 :'.elementor-icon-list-items li:nth-child(3)',
+  }
+
