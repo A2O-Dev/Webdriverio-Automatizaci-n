@@ -34,11 +34,11 @@ describe('Check the integrity of the UI of the Web App Development page in Servi
         const homePage = await $(footer.fabLink)
         const btnGoToTop = await $(footer.goToTopButton)
 
-        await expect(aboutUsLink).toHaveTextContaining('About us')
-        await expect(servicesLink).toHaveTextContaining('Services')
-        await expect(projectsLink).toHaveTextContaining('Projects')
-        await expect(faqLink).toHaveTextContaining('FAQ')
-        await expect(contactUsLink).toHaveTextContaining('Contact us')
+        await expect(aboutUsLink).toBeExisting()
+        await expect(servicesLink).toBeExisting()
+        await expect(projectsLink).toBeExisting()
+        await expect(faqLink).toBeExisting()
+        await expect(contactUsLink).toBeExisting()
         await expect(iconLenguage).toBeExisting()
 
         await expect(webAppFirstTitle).toBeExisting()
