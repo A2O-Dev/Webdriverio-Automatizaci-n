@@ -6,7 +6,7 @@ if (envFound.error) {
 }
 const env = process.env
 
-const host = env.A2O_DEV_URL ?? 'https://staging-new.a2odev.com'
+const host = env.A2O_DEV_URL ?? 'https://staging.a2odev.com'
 
 export const urls = {
   host,
