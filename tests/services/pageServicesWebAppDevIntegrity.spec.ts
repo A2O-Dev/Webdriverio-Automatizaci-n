@@ -6,7 +6,6 @@ describe('Check the integrity of the UI of the Web App Development page in Servi
         await browser.url(urls.webAppDevelopment)     
         await browser.maximizeWindow()
 
-        // Variables
         const aboutUsLink = await $(navigationMenu.aboutUsLink)
         const servicesLink = await $(navigationMenu.servicesLink)
         const projectsLink = await $(navigationMenu.projectsLink)
@@ -19,7 +18,6 @@ describe('Check the integrity of the UI of the Web App Development page in Servi
         const webAppItem1 = await $(services.webAppImg1)
         const webAppItem2 = await $(services.webAppImg2)
         
-       
         const titleContactUs = await $(contactUs.titleContactUs)
         const inputName = await $(contactUs.name)
         const inputEmail = await $(contactUs.email)

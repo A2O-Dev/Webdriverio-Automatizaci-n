@@ -23,7 +23,7 @@ export const services = {
   listDesign          :'//li[@class="elementor-icon-list-item"][3]',
 
 
-  webAppFirstTitle    : 'h2=Web App Development',
+  webAppFirstTitle    : 'h1=Web App Development',
   webAppParagraph     : 'p=Update your existing web app to the latest technologies, or create one from scratch!',
   webAppImg1          : '//span[contains(text(),"FrontEnd Technologies we excel at: VueJs, NodeJs,")]',
   webAppImg2          : '//span[normalize-space()="BackEnd Technologies we excel at: PHP, Laravel"]',
