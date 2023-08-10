@@ -9,7 +9,6 @@ export const services = {
   mobileDevTitle      :'h2=Mobile App Dev',
   otherSolutionTitle  :'h2=Website Development',
 
-
   SolutionsFirstTitle :'h2=Other Solutions',
   paragraph           :'p=Other services we excel in:',
   item1               :'.elementor-icon-list-items li:nth-child(1)',
