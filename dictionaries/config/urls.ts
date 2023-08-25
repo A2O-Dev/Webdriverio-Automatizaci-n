@@ -17,4 +17,5 @@ export const urls = {
   jobs:              `${host}/jobs`,
   webAppDevelopment: `${host}/web-app-development/`,
   mobileDevelopment: `${host}/mobile-development/`,
+  webSiteDevelopment:`${host}/website-development/`,
 }
