@@ -28,10 +28,5 @@ describe('About Us Integrity', () => {
     
     await contanctUsLink.click()
     await expect($(contactUs.contactUsForm)).toBeExisting()
-
   })
 })
-
-
-
-

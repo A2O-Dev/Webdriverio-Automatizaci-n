@@ -23,5 +23,4 @@ export const projects = {
   arrowRightReal         :'id="n2-ss-11-arrow-next"',
   arrowLeftReal          :'id="n2-ss-11-arrow-previous"',
   closeButtonReal        :'//*[@id="premium-modal-3da65c0"]/div/div[1]/div/button',
-
 }

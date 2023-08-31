@@ -6,7 +6,6 @@ describe('Check the "IT Technician and Data Center" page', () => {
     await browser.url(urls.jobsItTechnician)
     await browser.maximizeWindow()
 
-
     const aboutUsLink = await $(navigationMenu.aboutUsLink)
     const servicesLink = await $(navigationMenu.servicesLink)
     const projectsLink = await $(navigationMenu.projectsLink)
@@ -23,7 +22,6 @@ describe('Check the "IT Technician and Data Center" page', () => {
     const applyNow = await $(jobs.applyNow)
     const notes = await $(jobs.notes)
     const btnGoToTop = await $(jobs.btnGoToTop)
-
 
     aboutUsLink.moveTo({})
     servicesLink.moveTo({})

@@ -24,5 +24,6 @@ export const jobs = {
   inputPass              :'input[type="password"]',
   btnNext                :'#identifierNext',
   btnPass                :'#passwordNext',
-}
 
+  webAppDevTitle         :'h1=Web App Developer',
+}

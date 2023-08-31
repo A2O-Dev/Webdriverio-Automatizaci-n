@@ -61,7 +61,6 @@ describe('Check the integrity of the UI of the Web App Development page in Servi
 
         await expect(btnGoToTop).toHaveAttribute('class', 'elementor-icon active')
         await btnGoToTop.click()
-        await expect(btnGoToTop).not.toHaveAttribute('class', 'active')
-            
+        await expect(btnGoToTop).not.toHaveAttribute('class', 'active')            
     })
 })

@@ -1,9 +1,8 @@
 import { jobs, navigationMenu } from '../../dictionaries/selectors/index.ts'
 import { urls } from '../../dictionaries/config/index.ts'
-
-describe('Check the UI integrity page for the DEVOPS ENGINEER area.', () => {
-    it('Page of the DEVOPS ENGINEER area', async () => {
-        await browser.url(urls.jobsDevopsEngineer)
+describe('Check the UI/UX integrity page for the WEB APP DEVELOPER area.', () => {
+    it('Page of the WEB APP DEVELOPER area', async () => {
+        await browser.url(urls.jobsWebAppDev)
         await browser.maximizeWindow()
 
         const aboutUsLink = await $(navigationMenu.aboutUsLink)
@@ -12,8 +11,8 @@ describe('Check the UI integrity page for the DEVOPS ENGINEER area.', () => {
         const faqLink = await $(navigationMenu.faqLink)
         const contactUsLink = await $(navigationMenu.contactUsLink)
         const languageLink = await $(navigationMenu.languageLink)
-
-        const firstTitleDevops = await $(jobs.firstTitleDevops)
+        
+        const firstTitleWebAppDev = await $(jobs.webAppDevTitle)
         const pageNav = await $(jobs.pageNav)
         const pageNavHome = await $(jobs.pageNavHome)
         const pageNavJobs = await $(jobs.pageNavJobs)
@@ -43,9 +42,9 @@ describe('Check the UI integrity page for the DEVOPS ENGINEER area.', () => {
         await expect(contactUsLink).toBeExisting()
         await expect(languageLink).toBeExisting()
 
-        await expect(firstTitleDevops).toHaveText('DevOps Engineer')
-        await expect(firstTitleDevops).toBeExisting()
-        await expect(pageNav).toHaveText('Home  –  Jobs – DevOps Engineer')
+        await expect(firstTitleWebAppDev).toHaveText('Web App Developer')
+        await expect(firstTitleWebAppDev).toBeExisting()
+        await expect(pageNav).toHaveText('Home  –  Jobs – Web App Developer'),
         await expect(pageNavHome).toBeExisting()
         await expect(pageNavJobs).toBeExisting()
       
@@ -55,13 +54,13 @@ describe('Check the UI integrity page for the DEVOPS ENGINEER area.', () => {
         await expect(applyNow).toBeExisting()
         await expect(notes).toHaveTextContaining('Notas')
 
-        await applyNow.scrollIntoView({ block: 'center', inline: 'center' });
+        await applyNow.scrollIntoView({ block: 'center', inline: 'center' })
         await expect(jobAppForm).toHaveText('Job application form')
-        await expect(jobAppForm).toHaveAttribute('href', 'https://forms.gle/c6WhHQj3CDnAy5zw9')
+        await expect(jobAppForm).toHaveAttribute('href', 'https://docs.google.com/forms/d/1dUayEoSKf4Wh6qu0nn35ruOnbKK3TiTg82Hl2A5G9fU/viewform?edit_requested=true')
         await expect(teoryTestForm).toHaveText('Theory test form')
-        await expect(teoryTestForm).toHaveAttribute('href', 'https://forms.gle/wpb2S2XZpCYqLjz76')
+        await expect(teoryTestForm).toHaveAttribute('href', 'https://docs.google.com/forms/d/1ZRyhjunBcg_FqYojlbGhItIJjM1Ly6YBRP_sJdKvO8w/viewform?edit_requested=true')
         await expect(logicalTest).toHaveText('Logical reasoning test')
-        await expect(logicalTest).toHaveAttribute('href', 'https://forms.gle/6zgrAfbjGo3UCm9A6')
+        await expect(logicalTest).toHaveAttribute('href', 'https://docs.google.com/forms/d/1ENkLqh9w83sX2wludXDq4E15-1lIWcWjRAJ8_Hq1FSY/viewform?edit_requested=true')
 
         await btnGoToTop.click()
         await expect(btnGoToTop).toBeExisting()

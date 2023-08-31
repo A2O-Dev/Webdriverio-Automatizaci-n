@@ -66,6 +66,5 @@ describe('Check the integrity of the UI of the Web Site Development page in Serv
         await expect(btnScrollUp).toHaveAttribute('class', 'elementor-icon active')
         await btnScrollUp.click()
         await expect(btnScrollUp).not.toHaveAttribute('class', 'active')
-
     })
 })

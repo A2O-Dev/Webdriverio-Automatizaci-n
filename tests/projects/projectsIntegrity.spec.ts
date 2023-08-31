@@ -19,8 +19,7 @@ describe('Projects Integrity', () => {
 
     await projectLink.click()
     await expect($(projects.mainProjectTitle)).toBeExisting()
-    await expect($(projects.projectSubtitle)).toBeExisting()
-    
+    await expect($(projects.projectSubtitle)).toBeExisting()    
     
     const paragraphCastingApp = await $(projects.paragraphCastingApp)
     castingApp.moveTo({})
@@ -32,14 +31,12 @@ describe('Projects Integrity', () => {
     imageApp.moveTo({})
     await expect($(projects.imgApp)).toBeExisting()
     await expect($(paragraphImagesgApp)).toBeExisting()
-    console.log(paragraphImagesgApp.getText())
-    
+    console.log(paragraphImagesgApp.getText())    
     
     const paragraphRealSstateApp = await $(projects.paragraphRealStateApp)
     realStateApp.moveTo({})
     await expect($(projects.imgRealState)).toBeExisting()
     await expect($(paragraphRealSstateApp)).toBeExisting()
     console.log(paragraphRealSstateApp.getText())
-    })
-    
+    })    
 })

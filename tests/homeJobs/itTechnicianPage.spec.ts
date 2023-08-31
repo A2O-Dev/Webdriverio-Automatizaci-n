@@ -8,8 +8,7 @@ describe('Check the links to the "Postúlate ahora" forms.', () => {
 
     const linkJobAppForm = await $(jobs.linkJobAppForm)
     const linkTheoryTestForm = await $(jobs.linkTheoryTestForm)
-    const linkLogicalTestForm = await $(jobs.linkLogicalTestForm)
-   
+    const linkLogicalTestForm = await $(jobs.linkLogicalTestForm)   
 
     await linkJobAppForm.scrollIntoView({ block: 'center', inline: 'center' })
     await linkJobAppForm.click()
@@ -36,7 +35,6 @@ describe('Check the links to the "Postúlate ahora" forms.', () => {
     await linkJobAppForm.scrollIntoView({ block: 'center', inline: 'center' })
     await linkLogicalTestForm.click()
     await expect(linkLogicalTestForm).toBeExisting
-    await browser.url(urls.jobsItTechnician)
-    
+    await browser.url(urls.jobsItTechnician)    
   })
 })
