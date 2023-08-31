@@ -43,6 +43,4 @@ export const services = {
   mobileItem2         :'//span[normalize-space()="IOS and Android with React Native"]',
   mobileItem3         :'//span[normalize-space()="Publish to stores"]',
   mobileImage         :'.elementor-element-66f1e757 .elementor-widget-container img',
-
 }
-
