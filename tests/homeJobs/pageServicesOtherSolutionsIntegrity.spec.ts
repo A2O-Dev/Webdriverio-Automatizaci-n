@@ -65,6 +65,5 @@ describe('Check the integrity of the UI of the Other Solutions page in Services'
         await expect(btnScrollUp).toHaveAttribute('class', 'elementor-icon active')
         await btnScrollUp.click()
         await expect(btnScrollUp).not.toHaveAttribute('class', 'active')
-
     })
 })
