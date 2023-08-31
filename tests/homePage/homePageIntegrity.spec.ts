@@ -40,8 +40,7 @@ describe('Home Page Integrity', () => {
         await expect($(faqLink)).toBeExisting()
         await expect($(contactUsLink)).toBeExisting()
         await expect($(languageLink)).toBeExisting()
-        await browser.scroll(0, 700)
-      
+        await browser.scroll(0, 700)      
 
         smartCard.moveTo({})
         interactiveCard.moveTo({})
@@ -53,8 +52,5 @@ describe('Home Page Integrity', () => {
         
         await goToTopButton.click()
         await expect($(goToTopButton)).toBeExisting()
-
-
-
     })
 })
