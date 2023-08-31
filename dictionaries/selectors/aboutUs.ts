@@ -10,6 +10,5 @@ export const aboutUs = {
   listLove               :'//li[@class="elementor-icon-list-item"][5]',
   listConstantly         :'//li[@class="elementor-icon-list-item"][6]',
   listUse                :'//li[@class="elementor-icon-list-item"][7]',
-  mainImg                :'.attachment-large.size-large.wp-image-3487'
-  
+  mainImg                :'.attachment-large.size-large.wp-image-3487'  
 } 
