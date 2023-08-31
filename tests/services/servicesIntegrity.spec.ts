@@ -33,6 +33,5 @@ describe('Services Integrity', () => {
     await expect($(services.listPrecise)).toHaveTextContaining('Precise solutions for required problems')
     await expect($(services.listEarly)).toHaveTextContaining('Early deliveries of results and reception of feedback')
     await expect($(services.listDesign)).toHaveTextContaining('Design with scalability in mind for future implementations')
-
   })
 })
