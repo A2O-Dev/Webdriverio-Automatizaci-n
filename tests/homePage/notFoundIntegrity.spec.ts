@@ -6,7 +6,6 @@ describe('Check Not Found Integrity', () => {
         await browser.url(urls.notFound)
         await browser.maximizeWindow()
 
-
         const numberFour1 = await $(found.numberFour1)
         const numberZero = await $(found.numberZero)
         const numberFour2 = await $(found.numberFour2)
