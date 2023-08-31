@@ -26,7 +26,4 @@ export const jobs = {
   btnPass                :'#passwordNext',
 
   webAppDevTitle         :'h1=Web App Developer',
-
-
 }
-
