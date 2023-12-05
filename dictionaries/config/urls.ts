@@ -19,4 +19,5 @@ export const urls = {
   webAppDevelopment: `${host}/web-app-development/`,
   mobileDevelopment: `${host}/mobile-development/`,
   webSiteDevelopment:`${host}/website-development/`,
+  jobsProductManager:`${host}/jobs/product-manager/`,
 }
